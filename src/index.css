@@ -1,5 +1,10 @@
 @import-normalize;
-/* bring in normalize.css styles */
+/* bring in normalize.css styles  */
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -8,10 +13,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  /* min-height: 100vh; */
   background-image: url(../src/images/BgImg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+
+  font-style: normal;
+  color: white;
 }
 
 code {
@@ -19,10 +27,38 @@ code {
     monospace;
 }
 
+h1,
 h2,
 h3,
-ul,
+h4,
+h5,
+h6,
 p {
   margin: 0;
+}
+
+ul,
+ol {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 5px;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

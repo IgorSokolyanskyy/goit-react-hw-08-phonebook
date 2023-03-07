@@ -16,9 +16,8 @@ export const Input = styled(Field)`
   border-radius: 8px;
   height: 25px;
   appearance: none;
-  background-color: ${props => props.theme.colors.buttonBg};
-  box-shadow: inset 2px 2px 5px ${props => props.theme.colors.colorShadow},
-    inset -5px -5px 10px ${props => props.theme.colors.white};
+  /* background-color: #737171; */
+
   transition: all 0.2s ease-in-out;
 
   &:focus {
@@ -46,7 +45,7 @@ export const Button = styled.button`
 
   &:focus,
   :hover {
-    background-color: #23fe06e0;
+    background-color: #00a226;
     transform: scale(1.15);
   }
 

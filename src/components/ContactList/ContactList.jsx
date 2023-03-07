@@ -1,7 +1,6 @@
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-import { contactsSelectors, contactsOperations } from 'redux/contacts';
+import { contactsSelectors } from 'redux/contacts';
 
 import Loader from 'components/Loader';
 import Contact from './Contact';
@@ -13,11 +12,6 @@ export default function ContactList() {
 
   const isLoading = useSelector(contactsSelectors.getIsLoading);
   const error = useSelector(contactsSelectors.getError);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(contactsOperations.fetchContacts());
-  }, [dispatch]);
 
   return (
     <>

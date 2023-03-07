@@ -1,3 +1,27 @@
+// import { useDispatch } from 'react-redux';
+// import { filtersSlice } from 'redux/contacts';
+// import { TextField } from '@mui/material';
+
+// export default function Filter() {
+//   const dispatch = useDispatch();
+
+//   function changeFilter(e) {
+//     const inputValue = e.target.value;
+//     dispatch(filtersSlice.setFilter(inputValue));
+//   }
+
+//   return (
+//     <TextField
+//       variant="standard"
+//       label="Find contacs by name"
+//       type="text"
+//       name="filter"
+//       placeholder="Enter name"
+//       onChange={changeFilter}
+//       sx={{ mb: 2 }}
+//     />
+//   );
+// }
 import { useDispatch, useSelector } from 'react-redux';
 
 import { contactsSelectors, filtersSlice } from 'redux/contacts';

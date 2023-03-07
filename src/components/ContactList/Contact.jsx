@@ -6,7 +6,7 @@ import { contactsOperations } from 'redux/contacts';
 
 import { Notify } from 'notiflix';
 
-import { Icon } from './ContactList.styled';
+import { Icon, Box, Name, Number } from './ContactList.styled';
 
 export default function Contact({ name, number, id }) {
   const dispatch = useDispatch();
@@ -18,9 +18,10 @@ export default function Contact({ name, number, id }) {
 
   return (
     <>
-      <p>
-        <b>{name} :</b> ( {number} )
-      </p>
+      <Box>
+        <Name>{name}</Name>
+        <Number>{number}</Number>
+      </Box>
 
       <Icon
         onClick={handleDelete}

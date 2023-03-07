@@ -5,10 +5,8 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  height: 100vh;
-  overflow: auto;
+  width: 420px;
   padding: 0;
-
   @media only screen and (max-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
@@ -22,8 +20,7 @@ export const Item = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 420px;
-  margin-right: 15px;
+  min-width: 380px;
 
   @media only screen and (max-width: 768px) {
     min-width: 0;
@@ -36,4 +33,16 @@ export const Item = styled.li`
 export const Icon = styled(RiDeleteBin2Line)`
   color: red;
   cursor: pointer;
+`;
+export const Box = styled.div`
+  display: flex;
+  gap: 50px;
+  max-width: 400px;
+`;
+export const Name = styled.p`
+  width: 200px;
+  font-weight: 400;
+`;
+export const Number = styled.p`
+  width: 150px;
 `;
