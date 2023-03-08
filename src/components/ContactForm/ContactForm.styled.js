@@ -16,8 +16,6 @@ export const Input = styled(Field)`
   border-radius: 8px;
   height: 25px;
   appearance: none;
-  /* background-color: #737171; */
-
   transition: all 0.2s ease-in-out;
 
   &:focus {

@@ -52,8 +52,8 @@ export default function RegisterForm() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
+          '& > :after ': { fill: 'white' },
         }}
-        autoComplete="off"
       >
         <Avatar sx={{ m: 1, bgcolor: 'red' }}>
           <LockOutlinedIcon />
@@ -66,7 +66,9 @@ export default function RegisterForm() {
             margin="normal"
             variant="standard"
             color="secondary"
-            InputProps={{ style: { color: 'white' } }}
+            InputProps={{
+              style: { color: 'white' },
+            }}
             required
             fullWidth
             id="name"
