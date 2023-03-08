@@ -7,12 +7,18 @@ export const List = styled.ul`
   gap: 8px;
   width: 420px;
   padding: 0;
-  @media only screen and (max-width: 768px) {
+
+  @media only screen and (max-width: 600px) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
     height: 100vh;
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 769px) {
+    margin: 0 auto;
   }
 `;
 
@@ -34,15 +40,18 @@ export const Icon = styled(RiDeleteBin2Line)`
   color: red;
   cursor: pointer;
 `;
+
 export const Box = styled.div`
   display: flex;
   gap: 50px;
   max-width: 400px;
 `;
+
 export const Name = styled.p`
-  width: 200px;
+  max-width: 200px;
   font-weight: 400;
 `;
+
 export const Number = styled.p`
-  width: 150px;
+  max-width: 150px;
 `;

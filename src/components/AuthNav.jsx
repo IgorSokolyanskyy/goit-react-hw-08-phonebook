@@ -3,10 +3,20 @@ import { NavLink as RouterLink } from 'react-router-dom';
 
 export default function AuthNav() {
   return (
-    <Box>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: { xs: 'column', sm: 'row' },
+        justifyContent: { xs: 'center', sm: 'flex-end' },
+        alignItems: 'center',
+      }}
+    >
       <Button
         to="/register"
-        sx={{ p: '10' }}
+        sx={{
+          p: { xs: '8px', sm: '10px' },
+          m: { xs: '4px', sm: '0' },
+        }}
         component={RouterLink}
         variant="text"
         color="inherit"
@@ -15,7 +25,10 @@ export default function AuthNav() {
       </Button>
       <Button
         to="/login"
-        sx={{ p: '10' }}
+        sx={{
+          p: { xs: '8px', sm: '10px' },
+          m: { xs: '4px', sm: '0' },
+        }}
         component={RouterLink}
         variant="text"
         color="inherit"
