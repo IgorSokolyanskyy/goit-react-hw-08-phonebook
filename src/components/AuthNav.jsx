@@ -16,6 +16,7 @@ export default function AuthNav() {
         sx={{
           p: { xs: '8px', sm: '10px' },
           m: { xs: '4px', sm: '0' },
+          '&.active': { color: 'rgb(130, 1, 1)', fontSize: '20px' },
         }}
         component={RouterLink}
         variant="text"
@@ -28,6 +29,7 @@ export default function AuthNav() {
         sx={{
           p: { xs: '8px', sm: '10px' },
           m: { xs: '4px', sm: '0' },
+          '&.active': { color: 'rgb(130, 1, 1)', fontSize: '20px' },
         }}
         component={RouterLink}
         variant="text"

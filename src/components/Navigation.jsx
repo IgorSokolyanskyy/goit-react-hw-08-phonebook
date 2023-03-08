@@ -12,7 +12,7 @@ export default function Navigation() {
         to="/"
         sx={{
           p: '10',
-          '&.active': { color: 'rgb(74, 1, 1)', fontSize: '20px' },
+          '&.active': { color: 'rgb(130, 1, 1)', fontSize: '20px' },
         }}
         component={RouterNavLink}
         activeClassName="active"
@@ -29,7 +29,7 @@ export default function Navigation() {
           component={RouterNavLink}
           sx={{
             p: '10',
-            '&.active': { color: 'rgb(74, 1, 1)', fontSize: '20px' },
+            '&.active': { color: 'rgb(130, 1, 1)', fontSize: '20px' },
           }}
           activeClassName="active"
           variant="text"
