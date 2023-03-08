@@ -59,14 +59,15 @@ export default function LoginForm() {
         <Typography component="h1" variant="h5">
           Log In
         </Typography>
-        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+        <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
           <TextField
             margin="normal"
-            variant="standard"
+            variant="outlined"
             color="secondary"
             InputProps={{ style: { color: 'white' } }}
             required
             fullWidth
+            focused
             id="email"
             label="Email"
             name="email"
@@ -75,10 +76,11 @@ export default function LoginForm() {
           />
           <TextField
             margin="normal"
-            variant="standard"
+            variant="outlined"
             color="secondary"
             InputProps={{ style: { color: 'white' } }}
             required
+            focused
             fullWidth
             name="password"
             label="Password"

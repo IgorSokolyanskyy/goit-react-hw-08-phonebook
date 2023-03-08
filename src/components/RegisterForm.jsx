@@ -52,7 +52,6 @@ export default function RegisterForm() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          '& > :after ': { fill: 'white' },
         }}
       >
         <Avatar sx={{ m: 1, bgcolor: 'red' }}>
@@ -61,29 +60,35 @@ export default function RegisterForm() {
         <Typography component="h1" variant="h5">
           Register
         </Typography>
-        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+
+        <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
           <TextField
-            margin="normal"
-            variant="standard"
+            label="Name"
+            name="name"
+            id="name"
             color="secondary"
+            required
+            focused
+            autoFocus
+            variant="outlined"
+            margin="normal"
+            fullWidth
+            autoComplete="name"
             InputProps={{
               style: { color: 'white' },
             }}
-            required
-            fullWidth
-            id="name"
-            label="Name"
-            name="name"
-            autoComplete="name"
-            autoFocus
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           />
+
           <TextField
             margin="normal"
-            variant="standard"
+            variant="outlined"
             color="secondary"
-            InputProps={{ style: { color: 'white' } }}
+            focused
+            InputProps={{
+              style: { color: 'white', backgroundColor: 'transparent' },
+            }}
             required
             fullWidth
             id="email"
@@ -93,9 +98,12 @@ export default function RegisterForm() {
           />
           <TextField
             margin="normal"
-            variant="standard"
+            variant="outlined"
             color="secondary"
-            InputProps={{ style: { color: 'white' } }}
+            focused
+            InputProps={{
+              style: { color: 'white', backgroundColor: 'none' },
+            }}
             required
             fullWidth
             name="password"
