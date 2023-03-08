@@ -1,5 +1,5 @@
 import { useAuth } from 'hooks/useAuth';
-import { Link as RouterLink } from 'react-router-dom';
+import { NavLink as RouterNavLink } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
 import { Box, Button } from '@mui/material';
 
@@ -10,8 +10,13 @@ export default function Navigation() {
     <Box sx={{ display: 'flex', alignItems: 'center' }} component="nav">
       <Button
         to="/"
-        sx={{ p: '10' }}
-        component={RouterLink}
+        sx={{
+          p: '10',
+          '&.active': { color: 'rgb(74, 1, 1)', fontSize: '20px' },
+        }}
+        component={RouterNavLink}
+        activeClassName="active"
+        exact
         variant="text"
         color="inherit"
         startIcon={<HomeIcon fontSize="large" />}
@@ -21,8 +26,12 @@ export default function Navigation() {
       {isLoggedIn && (
         <Button
           to="/contacts"
-          component={RouterLink}
-          sx={{ p: '10' }}
+          component={RouterNavLink}
+          sx={{
+            p: '10',
+            '&.active': { color: 'rgb(74, 1, 1)', fontSize: '20px' },
+          }}
+          activeClassName="active"
           variant="text"
           color="inherit"
         >

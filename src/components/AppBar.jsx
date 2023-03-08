@@ -16,7 +16,8 @@ export default function ResponsiveAppBar() {
           justifyContent: 'space-between',
           alignItems: 'center',
           px: { xs: 2, sm: 3 },
-          py: { xs: 1, sm: 2 },
+          // py: { xs: 1, sm: 2 },
+
           '@media only screen and (max-width: 600px)': {
             justifyContent: 'space-around',
           },
