@@ -52,6 +52,8 @@ export const Box = styled.div`
 
 export const Name = styled.p`
   display: flex;
+  align-items: center;
+
   width: 180px;
   @media only screen and (max-width: 768px) {
     width: 120px;
@@ -60,6 +62,7 @@ export const Name = styled.p`
 
 export const Number = styled.p`
   display: flex;
+  align-items: center;
 
   width: 130px;
 
