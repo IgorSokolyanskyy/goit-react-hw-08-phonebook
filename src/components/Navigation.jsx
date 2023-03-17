@@ -15,8 +15,6 @@ export default function Navigation() {
           '&.active': { color: 'rgb(130, 1, 1)', fontSize: '20px' },
         }}
         component={RouterNavLink}
-        activeClassName="active"
-        exact
         variant="text"
         color="inherit"
         startIcon={<HomeIcon fontSize="large" />}
@@ -31,7 +29,6 @@ export default function Navigation() {
             p: '10',
             '&.active': { color: 'rgb(130, 1, 1)', fontSize: '20px' },
           }}
-          activeClassName="active"
           variant="text"
           color="inherit"
         >
