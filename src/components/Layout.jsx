@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
-import ResponsiveAppBar from './AppBar';
 import { Suspense } from 'react';
-import Loader from './Loader';
+import ResponsiveAppBar from 'components/AppBar';
+import Loader from 'components/Loader';
 
 export default function Layout() {
   return (

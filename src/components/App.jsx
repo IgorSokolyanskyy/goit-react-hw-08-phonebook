@@ -44,7 +44,6 @@ export default function App() {
               <PublicRoute redirectTo="/contacts" component={<LoginPage />} />
             }
           />
-
           <Route
             path="/contacts"
             element={

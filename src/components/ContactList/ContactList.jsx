@@ -1,10 +1,7 @@
 import { useSelector } from 'react-redux';
-
 import { contactsSelectors } from 'redux/contacts';
-
 import Loader from 'components/Loader';
 import Contact from './Contact';
-
 import { List, Item } from './ContactList.styled';
 
 export default function ContactList() {

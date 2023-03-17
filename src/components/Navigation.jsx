@@ -1,7 +1,7 @@
 import { useAuth } from 'hooks/useAuth';
 import { NavLink as RouterNavLink } from 'react-router-dom';
-import HomeIcon from '@mui/icons-material/Home';
 import { Box, Button } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
 
 export default function Navigation() {
   const { isLoggedIn } = useAuth();

@@ -1,37 +1,21 @@
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/operations';
+import Copyright from 'components/Copyright';
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {'Copyright © '}
-      <Link color="inherit" href="https://github.com/IgorSokolyanskyy">
-        Igor Sokolyanskyy
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
 export default function LoginForm() {
   const dispatch = useDispatch();
+
   const handleSubmit = e => {
     e.preventDefault();
+
     const form = e.currentTarget;
 
     dispatch(
@@ -56,9 +40,11 @@ export default function LoginForm() {
         <Avatar sx={{ m: 1, bgcolor: 'red' }}>
           <LockOutlinedIcon />
         </Avatar>
+
         <Typography component="h1" variant="h5">
           Log In
         </Typography>
+
         <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
           <TextField
             margin="normal"
@@ -98,7 +84,7 @@ export default function LoginForm() {
           </Button>
         </Box>
       </Box>
-      <Copyright sx={{ mt: 8, mb: 4, color: 'white' }} />
+      <Copyright sx={{ mt: 8, mb: 4 }} />
     </Container>
   );
 }

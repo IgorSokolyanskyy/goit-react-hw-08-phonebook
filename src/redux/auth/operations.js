@@ -19,10 +19,10 @@ export const register = createAsyncThunk(
     try {
       const { data } = await axios.post('/users/signup', credentials);
       token.set(data.token);
-      Notify.info(`Please confirm registration. Check your email`);
+      Notify.success(`Welcome ${data.user.name}!`);
       return data;
     } catch (e) {
-      Notify.failure(e.response.data.message);
+      Notify.failure('Something went wrong, please try again');
       return rejectWithValue(e.message);
     }
   }
@@ -34,9 +34,12 @@ export const logIn = createAsyncThunk(
     try {
       const { data } = await axios.post('/users/login', credentials);
       token.set(data.token);
+      Notify.success('Login successfully!');
       return data;
     } catch (e) {
-      Notify.failure(e.response.data.message);
+      Notify.failure(
+        'Login operation failed, please check the correctness of the data entered or you have not registered yet'
+      );
       return thunkAPI.rejectWithValue(e.message);
     }
   }
@@ -46,8 +49,12 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     const { data } = await axios.post('/users/logout');
     token.unset();
+    Notify.success('Login successfully!');
     return data;
   } catch (e) {
+    Notify.failure(
+      'You were unable to log in, please check your email details.'
+    );
     return thunkAPI.rejectWithValue(e.message);
   }
 });

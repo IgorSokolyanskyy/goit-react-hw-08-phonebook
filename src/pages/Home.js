@@ -1,6 +1,6 @@
-import { Container, Link, Typography } from '@mui/material';
-import { useAuth } from 'hooks/useAuth';
 import { NavLink } from 'react-router-dom';
+import { useAuth } from 'hooks/useAuth';
+import { Container, Link, Typography } from '@mui/material';
 
 export default function Home() {
   const { isLoggedIn } = useAuth();

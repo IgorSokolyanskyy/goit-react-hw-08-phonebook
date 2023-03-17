@@ -1,37 +1,21 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
+import Copyright from 'components/Copyright';
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {'Copyright © '}
-      <Link color="inherit" href="https://github.com/IgorSokolyanskyy">
-        Igor Sokolyanskyy
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
 export default function RegisterForm() {
   const dispatch = useDispatch();
+
   const handleSubmit = e => {
     e.preventDefault();
+
     const form = e.currentTarget;
 
     dispatch(
@@ -57,6 +41,7 @@ export default function RegisterForm() {
         <Avatar sx={{ m: 1, bgcolor: 'red' }}>
           <LockOutlinedIcon />
         </Avatar>
+
         <Typography component="h1" variant="h5">
           Register
         </Typography>
@@ -80,14 +65,13 @@ export default function RegisterForm() {
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           />
-
           <TextField
             margin="normal"
             variant="outlined"
             color="secondary"
             focused
             InputProps={{
-              style: { color: 'white', backgroundColor: 'transparent' },
+              style: { color: 'white' },
             }}
             required
             fullWidth
@@ -102,7 +86,7 @@ export default function RegisterForm() {
             color="secondary"
             focused
             InputProps={{
-              style: { color: 'white', backgroundColor: 'none' },
+              style: { color: 'white' },
             }}
             required
             fullWidth
@@ -122,7 +106,7 @@ export default function RegisterForm() {
           </Button>
         </Box>
       </Box>
-      <Copyright sx={{ mt: 8, mb: 4, color: 'white' }} />
+      <Copyright sx={{ mt: 8, mb: 4 }} />
     </Container>
   );
 }

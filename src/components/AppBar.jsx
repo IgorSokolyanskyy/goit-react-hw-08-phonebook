@@ -1,9 +1,9 @@
-import Navigation from './Navigation';
-import AuthNav from './AuthNav';
+import Navigation from 'components/Navigation';
+import AuthNav from 'components/AuthNav';
+import UserMenu from 'components/UserMenu';
 import { useAuth } from 'hooks/useAuth';
 import * as React from 'react';
 import { AppBar, Toolbar } from '@mui/material';
-import UserMenu from './UserMenu';
 
 export default function ResponsiveAppBar() {
   const { isLoggedIn } = useAuth();

@@ -1,5 +1,5 @@
-import { Box, Button } from '@mui/material';
 import { NavLink as RouterLink } from 'react-router-dom';
+import { Box, Button } from '@mui/material';
 
 export default function AuthNav() {
   return (

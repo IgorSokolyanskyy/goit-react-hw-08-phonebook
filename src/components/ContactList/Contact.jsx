@@ -1,11 +1,7 @@
 import PropTypes from 'prop-types';
-
 import { useDispatch } from 'react-redux';
-
 import { contactsOperations } from 'redux/contacts';
-
 import { Notify } from 'notiflix';
-
 import { Icon, Box, Name, Number } from './ContactList.styled';
 
 export default function Contact({ name, number, id }) {
