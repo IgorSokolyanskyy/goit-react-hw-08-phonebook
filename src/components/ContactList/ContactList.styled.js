@@ -4,21 +4,14 @@ import { RiDeleteBin2Line } from 'react-icons/ri';
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+
   width: 420px;
   padding: 0;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    width: 100%;
-  }
-
-  @media only screen and (min-width: 769px) {
-    margin: 0 auto;
   }
 `;
 
@@ -26,7 +19,12 @@ export const Item = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 380px;
+  padding: 3px;
+  border-radius: 5px;
+
+  :hover {
+    background-color: #00a226;
+  }
 
   @media only screen and (max-width: 768px) {
     min-width: 0;
@@ -43,15 +41,29 @@ export const Icon = styled(RiDeleteBin2Line)`
 
 export const Box = styled.div`
   display: flex;
+  justify-content: space-between;
+
   gap: 50px;
-  max-width: 400px;
+
+  @media only screen and (max-width: 768px) {
+    gap: 30px;
+  }
 `;
 
 export const Name = styled.p`
-  max-width: 200px;
-  font-weight: 400;
+  display: flex;
+  width: 180px;
+  @media only screen and (max-width: 768px) {
+    width: 120px;
+  }
 `;
 
 export const Number = styled.p`
-  max-width: 150px;
+  display: flex;
+
+  width: 130px;
+
+  @media only screen and (max-width: 768px) {
+    width: 80px;
+  }
 `;

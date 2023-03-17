@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { contactsOperations } from 'redux/contacts';
 import { Notify } from 'notiflix';
 import { Icon, Box, Name, Number } from './ContactList.styled';
+import { IoCallSharp, IoPersonAddSharp } from 'react-icons/io5';
 
 export default function Contact({ name, number, id }) {
   const dispatch = useDispatch();
@@ -15,8 +16,16 @@ export default function Contact({ name, number, id }) {
   return (
     <>
       <Box>
-        <Name>{name}</Name>
-        <Number>{number}</Number>
+        <Name>
+          <IoPersonAddSharp />
+
+          <span style={{ marginLeft: '7px' }}> {name}</span>
+        </Name>
+
+        <Number>
+          <IoCallSharp size={20} />
+          <span style={{ marginLeft: '5px' }}> {number}</span>
+        </Number>
       </Box>
 
       <Icon
