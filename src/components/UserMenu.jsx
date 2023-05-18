@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { authOperations } from 'redux/auth';
-import { useAuth } from 'hooks/useAuth';
 import { Box, Button, Typography } from '@mui/material';
 import { AccountCircle } from '@mui/icons-material';
+import useAuth from 'hooks/useAuth';
 
 export default function UserMenu() {
   const dispatch = useDispatch();

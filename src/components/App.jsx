@@ -7,7 +7,7 @@ import PrivateRoute from 'components/PrivateRoute';
 import NotFound from 'components/NotFound';
 import Loader from 'components/Loader';
 import Layout from 'components/Layout';
-import { useAuth } from 'hooks/useAuth';
+import useAuth from 'hooks/useAuth';
 
 const HomePage = lazy(() => import('pages/Home'));
 const RegisterPage = lazy(() => import('pages/Register'));

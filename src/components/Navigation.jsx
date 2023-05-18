@@ -1,4 +1,4 @@
-import { useAuth } from 'hooks/useAuth';
+import useAuth from 'hooks/useAuth';
 import { NavLink as RouterNavLink } from 'react-router-dom';
 import { Box, Button } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
